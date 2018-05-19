@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NorthwindDemo.Module", "NorthwindDemo.Module\NorthwindDemo.Module.vbproj", "{28205990-481B-4A8D-A20A-21A2C4C93FFA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NorthwindDemo.Win", "NorthwindDemo.Win\NorthwindDemo.Win.vbproj", "{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Dennis.Linq", "Dennis.Linq\Dennis.Linq.vbproj", "{A380102C-5890-4619-92BF-113216D37C3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28205990-481B-4A8D-A20A-21A2C4C93FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0595E40B-823A-4BEF-B655-09DA5D5BC3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A380102C-5890-4619-92BF-113216D37C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
