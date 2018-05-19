@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="NorthwindDemo.Module.Employee">
+      <OwnMembers>
+        <Member Name="Orders_Max_Linq" IsCustom="True" Caption="Orders Max (Freight)" Type="System.Decimal" IsCalculated="True" Expression="1=1" IsNewNode="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="NorthwindDemo.Module.Order">
+      <OwnMembers>
+        <Member Name="Employee_Linq" IsCustom="True" Caption="Employee" Type="System.String" IsCalculated="True" Expression="1=1" IsNewNode="True" />
+        <Member Name="Orders_Sum_Linq" IsCustom="True" Type="System.Decimal" Caption="Orders Sum (Freight)" IsCalculated="True" Expression="1=1" IsNewNode="True" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Linq" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Customer_ListView_Linq" Caption="Customer_Linq" ViewId="Customer_ListView_CustomersLinq_Linq" Index="0" IsNewNode="True" />
+          <Item Id="Order_ListView_Linq" ViewId="Order_ListView_OrdersLinq_Linq" Caption="Order_Linq" Index="1" IsNewNode="True" />
+          <Item Id="Employee_ListView_Linq" Caption="Employee_Linq" ViewId="Employee_ListView_EmployeesLinq_Linq" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>
