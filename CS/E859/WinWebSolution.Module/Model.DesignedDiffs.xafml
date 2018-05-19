@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application>
+  <BOModel>
+    <Class Name="WinWebSolution.Module.Employee">
+      <Member Name="Orders_Max_Linq" IsCustom="True" Caption="Orders Max ( Freight )" Type="System.Decimal" IsNewNode="True" />
+    </Class>
+    <Class Name="WinWebSolution.Module.Order">
+      <Member Name="Employee_Linq" IsCustom="True" Caption="Employee" Type="System.String" IsNewNode="True" />
+      <Member Name="Orders_Sum_Linq" IsCustom="True" Type="System.Decimal" Caption="Orders Sum ( Freight )" IsNewNode="True" />
+    </Class>
+  </BOModel>
+	<NavigationItems>
+		<Group ID="Linq" Caption="Linq" IsNewNode="True">
+			<Item ID="Customer_ListView_Linq" Caption="Customer_Linq" ViewID="Customer_ListView_CustomersLinq_Linq" Index="0" IsNewNode="True" />
+			<Item ID="Employee_ListView_Linq" Caption="Employee_Linq" ViewID="Employee_ListView_EmployeesLinq_Linq" IsNewNode="True" />
+			<Item ID="Order_ListView_Linq" ViewID="Order_ListView_OrdersLinq_Linq" Caption="Order_Linq" Index="1" IsNewNode="True" />
+		</Group>
+	</NavigationItems>
+</Application>

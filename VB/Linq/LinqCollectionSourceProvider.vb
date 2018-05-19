@@ -1,0 +1,94 @@
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Text
+Imports DevExpress.ExpressApp
+Imports DevExpress.ExpressApp.DC
+Imports System.Reflection
+Imports DevExpress.Xpo
+
+Namespace Dennis.Linq
+	Public NotInheritable Class LinqCollectionSourceHelper
+		Private Sub New()
+		End Sub
+		Public Shared Sub CreateCustomCollectionSource(ByVal sender As Object, ByVal e As CreateCustomCollectionSourceEventArgs)
+			Dim listViewInfo As DictionaryNode = (CType(sender, XafApplication)).FindViewInfo(e.ListViewID)
+			If listViewInfo Is Nothing Then
+				Return
+			End If
+			Dim queryMethod As String = listViewInfo.GetAttributeValue("XPQueryMethod")
+			If String.IsNullOrEmpty(queryMethod) Then
+				Return
+			End If
+			Dim query As IQueryable = LinqCollectionSourceHelper.InvokeMethod(e.ObjectType, queryMethod, e.ObjectSpace.Session)
+			If query Is Nothing Then
+				Return
+			End If
+			e.CollectionSource = New LinqCollectionSource(e.ObjectSpace, e.ObjectType, query)
+		End Sub
+		Public Shared Function GetXPQueryMethods(ByVal type As Type) As String()
+			Dim names As List(Of String) = New List(Of String)()
+			Dim methods() As MethodInfo = type.GetMethods(System.Reflection.BindingFlags.Public Or System.Reflection.BindingFlags.Static)
+			For Each mi As MethodInfo In methods
+				If IsCompatibleMethod(mi) Then
+					names.Add(mi.Name)
+				End If
+			Next mi
+			Return names.ToArray()
+		End Function
+		Public Shared Function IsCompatibleMethod(ByVal mi As MethodInfo) As Boolean
+			Dim pis() As ParameterInfo = mi.GetParameters()
+			Return mi.ReturnType IsNot Nothing AndAlso GetType(IQueryable).IsAssignableFrom(mi.ReturnType) AndAlso pis.Length = 1 AndAlso pis(0).ParameterType.IsAssignableFrom(GetType(Session))
+		End Function
+		Public Shared Function InvokeMethod(ByVal type As Type, ByVal name As String, ByVal session As Session) As IQueryable
+			Dim method As MethodInfo = FindMethod(type, name)
+			If method Is Nothing Then
+				Return Nothing
+			End If
+			Return CType(method.Invoke(Nothing, New Object() { session }), IQueryable)
+		End Function
+		Private Shared Function FindMethod(ByVal type As Type, ByVal name As String) As MethodInfo
+			Dim methods() As MethodInfo = type.GetMethods(System.Reflection.BindingFlags.Public Or System.Reflection.BindingFlags.Static)
+			For Each mi As MethodInfo In methods
+				If mi.Name = name AndAlso IsCompatibleMethod(mi) Then
+					Return mi
+				End If
+			Next mi
+			Return Nothing
+		End Function
+		Public Shared Function GetDisplayableProperties(ByVal type As Type, ByVal name As String) As String()
+			Dim method As MethodInfo = FindMethod(type, name)
+			If method Is Nothing Then
+				Return Nothing
+			End If
+			For Each attribute As CustomQueryPropertiesAttribute In method.GetCustomAttributes(GetType(CustomQueryPropertiesAttribute), False)
+				If attribute.Name = "DisplayableProperties" Then
+					Return attribute.Value.Split(";"c)
+				End If
+			Next attribute
+			Return Nothing
+		End Function
+	End Class
+	<AttributeUsage(AttributeTargets.Method)> _
+	Public NotInheritable Class CustomQueryPropertiesAttribute
+		Inherits Attribute
+		Private theName As String
+		Private theValue As String
+		Public ReadOnly Property Name() As String
+			Get
+				Return theName
+			End Get
+		End Property
+		Public ReadOnly Property Value() As String
+			Get
+				Return theValue
+			End Get
+		End Property
+		Public Sub New(ByVal theName As String, ByVal theValue As String)
+			Me.theName = theName
+			Me.theValue = theValue
+		End Sub
+	End Class
+
+End Namespace
