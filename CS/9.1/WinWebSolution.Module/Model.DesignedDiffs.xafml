@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application>
+  <BOModel>
+    <Class Name="WinWebSolution.Module.Employee">
+      <Member Name="Orders_Max_Linq" IsCustom="True" Caption="Orders Max ( Freight )" Type="System.Decimal" IsNewNode="True" />
+    </Class>
+    <Class Name="WinWebSolution.Module.Order">
+      <Member Name="Employee_Linq" IsCustom="True" Caption="Employee" Type="System.String" IsNewNode="True" />
+      <Member Name="Orders_Sum_Linq" IsCustom="True" Type="System.Decimal" Caption="Orders Sum ( Freight )" IsNewNode="True" />
+    </Class>
+  </BOModel>
+	<NavigationItems>
+		<Group ID="Linq" Caption="Linq" IsNewNode="True">
+			<Item ID="Customer_ListView_Linq" Caption="Customer_Linq" ViewID="Customer_ListView_Linq" Index="0" IsNewNode="True" />
+			<Item ID="Employee_ListView_Linq" Caption="Employee_Linq" ViewID="Employee_ListView_Linq" IsNewNode="True" />
+			<Item ID="Order_ListView_Linq" ViewID="Order_ListView_Linq" Caption="Order_Linq" Index="1" IsNewNode="True" />
+		</Group>
+	</NavigationItems>
+	<Views>
+		<ListView ID="Customer_ListView_Linq" IsGroupPanelVisible="False" AutoExpandAllGroups="False" IsFilterPanelVisible="False" IsFooterVisible="True" IsActiveFilterEnabled="True" DetailViewID="Customer_DetailView" Caption="from c in customers">
+			<Columns>
+				<ColumnInfo PropertyName="City" Index="4" Width="70" IsNewNode="True" />
+				<ColumnInfo PropertyName="CompanyName" Index="1" Width="70" IsNewNode="True" />
+				<ColumnInfo PropertyName="ContactName" Index="0" SortIndex="0" SortOrder="Ascending" Width="400" IsNewNode="True" />
+				<ColumnInfo PropertyName="ContactTitle" Index="2" Width="70" IsNewNode="True" />
+				<ColumnInfo PropertyName="Country" Index="3" Width="70" IsNewNode="True" />
+				<ColumnInfo PropertyName="CustomerID" Index="-1" Width="70" IsNewNode="True" />
+			</Columns>
+		</ListView>
+		<ListView ID="Employee_ListView_Linq">
+			<Columns>
+				<ColumnInfo PropertyName="FullName" Caption="Employee FullName" IsNewNode="True" />
+				<ColumnInfo PropertyName="Orders_Max_Linq" Caption="Orders Max ( Freight )" IsNewNode="True" />
+			</Columns>
+		</ListView>
+		<ListView ID="Order_ListView_Linq" IsGroupPanelVisible="False" AutoExpandAllGroups="False" IsFilterPanelVisible="False" IsFooterVisible="True" IsActiveFilterEnabled="True" DetailViewID="Order_DetailView">
+			<Columns>
+				<ColumnInfo PropertyName="Employee_Linq" Caption="Employee FullName" IsNewNode="True" />
+				<ColumnInfo PropertyName="Orders_Sum_Linq" Caption="Orders Sum ( Freight )" IsNewNode="True" />
+			</Columns>
+		</ListView>
+	</Views>
+</Application>
