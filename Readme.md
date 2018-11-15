@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DisableActionsLinqListViewController.cs](./CS/Linq/DisableActionsLinqListViewController.cs) (VB: [DisableActionsLinqListViewController.vb](./VB/Linq/DisableActionsLinqListViewController.vb))
+* [LinqCollectionSource.cs](./CS/Linq/LinqCollectionSource.cs) (VB: [LinqCollectionSource.vb](./VB/Linq/LinqCollectionSource.vb))
+* [LinqCollectionSourceProvider.cs](./CS/Linq/LinqCollectionSourceProvider.cs) (VB: [LinqCollectionSourceProvider.vb](./VB/Linq/LinqCollectionSourceProvider.vb))
+* [Module.cs](./CS/Linq/Module.cs) (VB: [Module.vb](./VB/Linq/Module.vb))
+* [Model.DesignedDiffs.xafml](./CS/WinWebSolution.Module/Model.DesignedDiffs.xafml) (VB: [Model.DesignedDiffs.xafml](./VB/WinWebSolution.Module/Model.DesignedDiffs.xafml))
+* [PersistentObjects.cs](./CS/WinWebSolution.Module/PersistentObjects.cs) (VB: [PersistentObjects.vb](./VB/WinWebSolution.Module/PersistentObjects.vb))
+<!-- default file list end -->
 # OBSOLETE - How to populate a List View with data from a LINQ query
 
 
