@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Model.DesignedDiffs.xafml](./CS/NorthwindDemo.Module/Model.DesignedDiffs.xafml) (VB: [Model.DesignedDiffs.xafml](./VB/NorthwindDemo.Module/Model.DesignedDiffs.xafml))
+* **[PersistentObjects.cs](./CS/NorthwindDemo.Module/PersistentObjects.cs) (VB: [PersistentObjects.vb](./VB/NorthwindDemo.Module/PersistentObjects.vb))**
+* [DisableStandardActionsLinqListViewController.cs](./CS/XAF.LinqToXpo/DisableStandardActionsLinqListViewController.cs) (VB: [DisableStandardActionsLinqListViewController.vb](./VB/XAF.LinqToXpo/DisableStandardActionsLinqListViewController.vb))
+* [LinqCollectionSource.cs](./CS/XAF.LinqToXpo/LinqCollectionSource.cs) (VB: [LinqCollectionSourceProvider.vb](./VB/XAF.LinqToXpo/LinqCollectionSourceProvider.vb))
+* [LinqCollectionSourceProvider.cs](./CS/XAF.LinqToXpo/LinqCollectionSourceProvider.cs) (VB: [LinqCollectionSourceProvider.vb](./VB/XAF.LinqToXpo/LinqCollectionSourceProvider.vb))
+* [Module.cs](./CS/XAF.LinqToXpo/Module.cs) (VB: [Module.vb](./VB/XAF.LinqToXpo/Module.vb))
+<!-- default file list end -->
 # OBSOLETE - How to populate a List View with data from a LINQ query
 
 
