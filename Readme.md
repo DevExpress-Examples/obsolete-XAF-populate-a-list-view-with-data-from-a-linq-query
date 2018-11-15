@@ -1,3 +1,14 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DisableActionsLinqListViewController.cs](./CS/Linq/DisableActionsLinqListViewController.cs) (VB: [DisableActionsLinqListViewController.vb](./VB/Linq/DisableActionsLinqListViewController.vb))
+* [LinqCollectionSource.cs](./CS/Linq/LinqCollectionSource.cs) (VB: [LinqCollectionSource.vb](./VB/Linq/LinqCollectionSource.vb))
+* [Module.cs](./CS/Linq/Module.cs) (VB: [Module.vb](./VB/Linq/Module.vb))
+* [LinqCollectionSourceProvider.cs](./CS/WinWebSolution.Module/LinqCollectionSourceProvider.cs) (VB: [LinqCollectionSourceProvider.vb](./VB/WinWebSolution.Module/LinqCollectionSourceProvider.vb))
+* [Model.DesignedDiffs.xafml](./CS/WinWebSolution.Module/Model.DesignedDiffs.xafml) (VB: [Model.DesignedDiffs.xafml](./VB/WinWebSolution.Module/Model.DesignedDiffs.xafml))
+* [WebApplication_E859.cs](./CS/WinWebSolution.Web/ApplicationCode/WebApplication_E859.cs) (VB: [WebApplication_E859.vb](./VB/WinWebSolution.Web/ApplicationCode/WebApplication_E859.vb))
+* [WinApplication_E859.cs](./CS/WinWebSolution.Win/WinApplication_E859.cs) (VB: [WinApplication_E859.vb](./VB/WinWebSolution.Win/WinApplication_E859.vb))
+<!-- default file list end -->
 # OBSOLETE - How to populate a List View with data from a LINQ query
 
 
